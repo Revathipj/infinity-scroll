@@ -17,11 +17,12 @@ const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&coun
 
 // Check if all images were loaded
 function imageLoaded() {
-    console.log('image loaded');
+    // console.log('image loaded');
     imageLoaded++;
     if (imageLoaded === totalImages) {
         ready = true;
-        console.log('ready=', ready);
+        loader.hidden=true;
+        // console.log('ready=', ready);
     }
 }
 
@@ -69,7 +70,7 @@ async function getPhotos() {
     try {
         const response = await fetch(apiUrl);
         photosArray = await response.json();
-        console.log(photosArray);
+        // console.log(photosArray);
         displayPhotos();
     } catch (error) {
         // Catch Error Here
