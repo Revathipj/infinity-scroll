@@ -15,7 +15,7 @@ const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&coun
 // Helper Function to Set Attributes on DOM Elements
 function setAttributes(element, attributes) {
     for (const key in attributes) {
-        element.setAttributes(key, attributes[key]);
+        element.setAttribute(key, attributes[key]);
     }
 }
 // Create Elements For Links & Photos,Add to DOM
